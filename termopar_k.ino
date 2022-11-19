@@ -1,5 +1,5 @@
 // Por Roberto A. Zavala
-//
+// Breve : https://es.overleaf.com/read/brrnnhvyfztr
 // Libro : https://www.amazon.com.mx/dp/B074TTGLL2
 // 🙏🏼    : DNv7acPAeVBhTXbKv26itJecPG1SPy2o4F
 
@@ -32,14 +32,13 @@ K = readK();   Serial.print("K = ");   Serial.println(K);
 F = readF();   Serial.print("°F = ");  Serial.println(F);
 mV= readmV();  Serial.print("mV = ");  Serial.println(mV);
 
-delay(177);
+delay(1770);
 }
 
 float readmV() { float mv = readBit(); return mv * 0.0103046875;}
-float readF()  { float f = readBit();  return f * .45 + 32; }
-float readK()  { float c = readBit();  return c  + 273.15;  }
-float readC()  { float c = readBit();  return c * 0.25;     }
-
+float readF()  { float f = readC();  return f * 1.8 + 32; }
+float readK()  { float c = readC();  return c  + 273.15;  }
+float readC()  { float c = readmV();  return 0.0115 + 25.4 * c + 0.447 * pow(c,2) + 0.0505 * pow(c,3); }
 int readBit()
 {
 digitalWrite(CS, LOW);
