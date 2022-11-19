@@ -19,8 +19,8 @@ int   AD;
 void setup()
 {
 Serial.begin(9600);
-pinMode(CS, OUTPUT);
 pinMode(SO, INPUT);
+pinMode(CS, OUTPUT);
 pinMode(SCK, OUTPUT);
 }
 
