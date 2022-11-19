@@ -1,3 +1,8 @@
+// Por Roberto A. Zavala
+//
+// Libro : https://www.amazon.com.mx/dp/B074TTGLL2
+// 🙏🏼    : DNv7acPAeVBhTXbKv26itJecPG1SPy2o4F
+
 #include <SPI.h>
 
 #define SO  4
