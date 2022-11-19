@@ -39,6 +39,7 @@ float readmV() { float mv = readBit(); return mv * 0.0103046875;}
 float readF()  { float f = readC();  return f * 1.8 + 32; }
 float readK()  { float c = readC();  return c  + 273.15;  }
 float readC()  { float c = readmV();  return 0.0115 + 25.4 * c + 0.447 * pow(c,2) + 0.0505 * pow(c,3); }
+
 int readBit()
 {
 digitalWrite(CS, LOW);
