@@ -32,7 +32,7 @@ K = readK();   Serial.print("K = ");   Serial.println(K);
 F = readF();   Serial.print("°F = ");  Serial.println(F);
 mV= readmV();  Serial.print("mV = ");  Serial.println(mV);
 
-delay(1770);
+delay(177);
 }
 
 float readmV() { float mv = readBit(); return mv * 0.0103046875;}
